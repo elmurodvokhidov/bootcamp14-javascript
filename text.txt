@@ -1,0 +1,72 @@
+JavaScript - veb-saytlarni dinamik va interaktiv qiladigan eng mashhur dasturlash tillaridan biri. JavaScriptdan mobil ilovalar va oʻyinlar yaratish, maʼlumotlarni qayta ishlash va boshqa koʻp maqsadlarda foydalanishingiz mumkin!
+
+Javascript haqida batafsil
+Javascript 1995 yilda Netscape Navigator Brauzerlari veb sahifalariga dastur qo'shish uchun taqdim etilgan. Java bilan JavaScript dasturlash tillari bir-biridan mutloq farq qiladi, ya'ni bu ikki til alohida vazifaga ega. Shunchaki JS yaratilgan paytlari Java dasturlash tili mashxur bo'lgan va yaratuvchilar marketing uchun Java so'zidan foydalanishgan. JS asta-sekin boshqa brauzerlarga tarqalishni boshlaganidan so'ng, uni standart ko'rinishga keltirish kerak edi. Chunki u turli hil brauzerlarda turlicha talqinga ega bo'lmasligi uchun uni standart ko'rinishga keltirish kerak bo'lgan, va aynan shu standart ko'rinishga ECMAScript deb nom berishgan. Bundan ko'rinadiki, JS hamda ECMAScript bir xil.
+
+console - veb-brauzerning bir qismidir. Konsolga xabarlarni yozish, kodingizdagi kichik muammolarni tashxislash va muammolarni bartaraf etishning yaxshi usuli hisoblanadi. 
+
+Qiymat (value) - eng kichik ko'rinishdagi ma'lumot yoki ma'lumot bo'lagi
+
+O'zgaruvchilar (variable) - o'zida ma'lum bir qiymatni saqlovchi container.
+O'zgaruchilarni e'lon qilinganidan so'ngina ishlatish mumkin, aks holda ya'ni e'lon qilinmagan o'zgaruvchilarni ishlatish xatolikka olib keladi!
+O'zgaruchilarni e'lon qilishning 3 xil usuli mavjud, bular: var, let hamda const
+O'zgaruchilarni e'lon qilishda ularga to'g'ri nom berish ham juda muhim, ya'ni odatda ularga camelCase usulida nom beriladi.
+
+let - Dasturimiz ishlashi davomida o'zgarishi mumkin bo'lgan o'zgaruvchilarni e'lon qilishda ishlatiladigan kalit so'z. E'lon qilinib bo'lingan o'zgaruvchini qiymatini o'zgartirish uchun hech qanday kalit so'z ishlatilmaydi!
+let name = "Rustam"
+name = "Doston"
+
+const - Dasturimiz ishlashi davomida o'zgarmaydigan o'zgaruvchilarni e'lon qilishda ishlatiladigan kalit so'z. Ular har doim boshlang'ich qiymatga ega bo'lishlari shart!
+const name = "Rustam"
+name = "Doston" ushbu holat xatolikka olib keladi!
+
+var - ES6 ya'ni ECMASCRIPT oltinchi versiyaga qadar o'zgaruvchilarni e'lon qilish uchun ishlatilgan. let dan deyarli farqi yo'q, har ikkisi ham bir xil vazifani bajaradi. Ularning yagona farqi, var yordamida e'lon qilingan o'zgaruvchilarni e'lon qilinishidan avval ham ishlatish imkoniyati mavjud va ular "undefined" qiymatini qaytaradi, let da bo'lsa xatolik yuzaga chiqadi.
+
+Math - matematik kutubxona
+Math.PI - π (3.14)
+Math.round() - eng yaqin butun songa yaxlitlangan raqamning qiymatini qaytaradi
+Math.pow() - ko'rsatilgan raqamning darajasini qaytaradi
+Math.sqrt() - raqamning ildiz ostidagi natijasini qaytaradi
+Math.abs() - moduldan chiqarish uchun ishlatiladi
+parseInt() - sonning butun qismini olish uchun ishlatiladi
+parseFloat() - haqiqiy sonlarni ajratib olish uchun ishlatiladi
+
+Data Types (Ma'lumot turlari) - Javascriptda jami 8ta ma'lumot turilari mavjud
+1.String
+2.Number
+3.Bigint
+4.Boolean
+5.Undefined
+6.Null
+7.Symbol
+8.Object
+
+String - JavaScriptda matn qo'shtirnoq ichiga olinishi kerak. 
+! Agar matnli xabar atrofida qo'shtirnoq qo'shmasangiz, JavaScript kodingiz ishlamaydi. Siz bitta (‘’) yoki ikkita (“”) tirnoq belgilaridan foydalanishingiz mumkin. 
+Masalan: 
+let text = "Hello World!"
+var name = 'Rustam'
+
+Number - Number - sonlarni o'zida saqlovchi ma'lumot turi
+Masalan: 
+let yosh = 45
+const yil = 2023
+var num = 4.5
+
+Javascript Operators - JavaScript operatorlari bir yoki bir nechta operandlar ustida amal bajaradi. Ularning quyidagicha turlari mavjud
+1.Arithmetic Operators (Arifmetik Operatorlar)
+2.Assignment Operators (Tayinlash Operatorlari)
+3.Comparison Operators (Solishtirish Operatorlari)
+4.Logical Operators (Mantiqiy Operatorlar)
+5.Conditional (ternary) Operators (Shart Operatorlari)
+
+Arifmetik operatorlar - JavaScript dasturlash tilida arifmetik operatorlardan foydalanib ikki operand ustida arifmetik amallar bajarish imkoniyati mavjud.
+
++   (addition) - ikki operandni qo'shish
+-   (substraction) - o'ng tomondagi operandni chaptarafdan ayirish
+*  (multiplication) - ikki operandni ko'paytirish
+** (exponentiation) - darajaga oshirish
+/   (division) - chap operandni o'ng operandga bo'lish
+%  (modulus) - ikki operanddan qoldiqni qaytarish
+++  (increment) - operand qiymatini bittaga oshirish
+--   (decrement) - operand qiymatini bittaga kamaytirish
