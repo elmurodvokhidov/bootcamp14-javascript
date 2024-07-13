@@ -1,0 +1,8 @@
+Null - bo'sh qiymatga ega bo'lgan ma'lumot turi
+BigInt - katta sonlarni o'zida saqlashga mo'ljallangan ma'lumot turi
+Symbol - yagona va o'zgarmas qiymatni o'zida saqlovchi ma'lumot turi
+Boolean - mantiqiy ma'lumot turi hisoblanib, u o'zida faqatgina true yoki false qiymatini qabul qiladi
+typeof operatoti o'zgaruvchi saqlayotgan ma'lumot turini aniqlashga yordam beradi
+Assignment operatorlaridan Javascript dasturlash tilida o'zgaruvchilarga shorthand (qisqartma) ko'rinishida yangi qiymatlar tayinlash uchun foydalaniladi
+
+operators: ( = ), ( += ), ( -= ), ( *= ), ( /= ), ( %= )
