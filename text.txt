@@ -1,0 +1,98 @@
+Conditional (shart) operators
+Ko'pincha biz kod yozganimizda, biz har xil shartlarga asoslanib, turli xil amallarni bajarishimiz kerak bo’ladi. Va bunda bizga shart operatori yordam beradi. Ya'ni biz shart operatoridan foydalanib, berilgan shartga ko'ra turli xil harakatlarni bajara olamiz.
+
+Conditional operators:  (if ), (switch)
+
+
+
+
+The if Statement
+if statement - ma'lum bir shartga muvofiq biron harakatni bajaradi. Agar qavs ichida berilgan shart true (rost) bo'lsa, figurali {} qavslar ichidagi harakat (kod bloki) ishga tushiriladi, aks holda kod bloki o'tkazib yuboriladi
+
+!Remember:
+if statement har doim kichik harflar bilan yozilishi kerak! Agar siz (IF) shu ko'rinishda, ya'ni katta harflar bilan if statement yozgan bo'lsangiz xatolik yuzaga keladi!
+
+if (condition) {
+  // block of code to be executed if the condition is true
+}
+
+
+
+
+The if /else Statement
+if statement 'ning 3 xil ko'rinishi mavjud bo'lib, bular:
+if
+if/else
+if/else if
+
+if/else statement - if statement ixtiyoriy ravishda else statement 'ga ham ega bo'lishi mumkin, bunda agar ko'rsatilgan shart true bo'lsa if aks holda else statement 'dagi kod bloki ishga tushadi
+
+if (condition) {
+  // block of code to be executed if the condition is true
+} else {
+  // block of code to be executed if the condition is false
+}
+
+
+
+
+The if /else if Statement
+if/else if statement - avval ko'rilgan ikki statement yordamida bizda faqatgina ikki holatni tekshirish imkoniyati bor edi, if/else if statement yordamida biz ikkitadan ko'p bo'lgan holatlarni o'z ichiga olgan shartlarni yozishimiz mumkin
+
+if (condition) {
+  // block of code to be executed if the condition is true
+} else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true 
+} else {
+  // block of code to be executed if /else if the condition is false
+}
+
+
+
+
+Ternary Operators
+Uchlik operatori shartni baholaydi va shart asosida kod blokini bajaradi.
+
+Uning sintaksisi:
+condition ? expression1 : expression2
+
+Uchlik operator sinov holatini baholaydi.
+
+- Agar shart `true` bo`lsa, **expression1** bajariladi.
+- Agar shart `false` bo`lsa, **expression2** bajariladi.
+
+Uchlik operator **uch** operandni oladi, shuning uchun uchlik operatori deb ataladi. U shartli operator sifatida ham tanilgan.
+
+
+
+
+`prompt()` metodi foydalanuvchidan ma'lumot kiritishni soʻraydigan dialog oynasini koʻrsatadi.
+
+`prompt()` metodi, agar foydalanuvchi "OK" tugmasini bossa, kiritilgan qiymatni qaytaradi, aks holda  `null` qiymatini qaytaradi.
+
+Uning sintaksisi:
+prompt(text, defaultText)
+
+
+
+
+`Confirm()` metodi xabar, OK tugmasi va Bekor qilish tugmasi boʻlgan muloqot oynasini koʻrsatadi.
+
+Agar foydalanuvchi “OK” tugmasini bosgan bo‘lsa, `confirm()` metodi `true` qaytaradi, aks holda `false`.
+
+Uning sintaksisi:
+confirm(message)
+
+
+
+
+String metods
+trim() - berilgan tekstdan xar ikkala tarafdan bo'sh joylarni olib tashlaydi. (trimStart, trimEnd)
+includes() - metodga berilgan string turdagi ma'lumotni ma'lum string da mavjud ekanligini tekshirib boolean turdagi ma'lumotni qaytaradi.
+length - string uzunligini qaytaradi.
+toLowerCase() - string barcha xarflarini kichik qiladi.
+toUpperCase() - string barcha xarflarini katta qiladi.
+
+
+
+Math.random() - nol va bir orasidagi raqamlarni tasodifiy ravishda qaytaradi.
