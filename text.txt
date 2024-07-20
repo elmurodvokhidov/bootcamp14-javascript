@@ -1,0 +1,13 @@
+Switch operatori
+Switch operatori har xil shartlarga asoslangan turli harakatlarni bajarish uchun ishlatiladi.
+
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+   // code block
+}
