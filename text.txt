@@ -1,0 +1,37 @@
+Loops (sikl)
+Javascript dasturlash tilida Loop 'lardan foydalangan holda bir xil kod blokini bir necha marotaba qayta - qayta ishlatish imkoni mavjud. Loop 'larga hayotdan misol: Fasllar almashinishi, quyosh va oyning doimiy tarzda ko'tarilib botishi va yana boshqa bir nechta misollar mavjud. Javascript dasturlash tilida uchta loop mavjud, bular: 
+
+for / while / do while
+
+for (sikl)
+for (statement 1; statement 2; statement 3) {  
+      // code block to be executed  
+}
+statement 1 - boshlang'ich nuqta, bu yerda o'zgaruvchini ham e'lon qilsa bo'ladi, sikl davomida u bir marotaba ishga tushuriladi
+statement 2 - belgilangan ma'lum bir shart (condition), agar shart true bo'lsa kod blok ishga tushadi, aks holda esa for sikli to'xtatiladi
+statement 3 - belgilangan  shart (condition) true bo'lsa statement 1 'ni yangilaydi va natijada loop yana takrorlanadi
+
+The syntax of the for loop is:
+for (initialExpression; condition; updateExpression) {
+    // for loop body
+}
+
+The initialExpression initializes and/or declares variables and executes only once.
+The condition is evaluated.
+If the condition is false, the for loop is terminated.
+If the condition is true, the block of code inside of the for loop is executed.
+The updateExpression updates the value of initialExpression when the condition is true.
+The condition is evaluated again. This process continues until the condition is false.
+
+Break statement
+Break statement 'dan foydalangan holda biz loop 'ni ma'lum bir shartga muvofiq to'xtatishimiz mumkin
+
+Continue statement
+Continue statement 'dan foydalangan holda biz loop 'ni takrorlanishini o'tkazib yuborishimiz mumkin (skip)
+
+While  (loop)
+Dasturlashda loop 'lardan foydalangan holda ma'lum bir kod blokini bir necha marotaba ishga tushirishimiz mumkin. While, for bilan deyarli bir xil vazifani bajaradi, ularni bir biridan farqi, bu ularni turli xil syntax ko'rinishga ega ekanligida. break statement, while siklida ham bir xil ishlaydi.
+while (condition) {
+    // body of  loop
+}
+condition - while berilgan shart  bo'yicha code blokini ishga tushiradi ya'ni berilgan shart true bo'lsa code bloki ishga tushadi aks holda, false bo'lsa code bloki o'tkazib yuboriladi (loop to'xtatiladi, bundan ko'rinib turibdiki while loop qachonki condition false bo'lguncha davom etar ekan)
