@@ -1,0 +1,33 @@
+do/while - ushbu statement huddi while sikli kabi bir xil vazifani bajaradi, faqat bu yerda dastlab siklning tanasi bajariladi, so'ng shart tekshiriladi. Agar berilgan shart true bo'lsa, do statement'da ko'rsatilgan code bloki yana bir bor bajariladi. Ushbu jarayon, berilgan  shart false bo'lmaguncha davom etadi. 
+do {
+    // body of loop
+} while(condition)
+
+
+IMPORTANT!
+do...while loop is similar to the while loop. The only difference is that in do…while loop, the body of loop is executed at least once.
+
+
+Function (funksiya)
+Funksiya albatta boshqa dasturlash tillarida bo'lgani kabi Javascript'ni ham asoslaridan biri, uning yordamida ma'lum bir vazifani bajaradigan code blokini yaratishimiz mumkin. Funksiya boshqa bir code qismida chaqirilgandagina ishga tushadi. Biz funksiya yordamida ma'lum bir code blokini bir marta e'lon qilib, uni bir necha marta istalgan joyda ishlatishimiz mumkin.
+
+Shuningdek, Javascript juda ko'p o'rnatilgan funksiyalarga ega, masalan Math.sqrt() sonning kvadrat ildizini hisoblash funksiyasidir
+
+Funksiya e'lon qilishning 3 xil usuli mavjud:
+function decloration
+function expression
+arrow function
+
+function nameOfFunction () {
+    // function body   
+}
+
+Function decloration - function kalit so'zi yordamida e'lon qilinadi va uni e'lon qilinishidan avval ham ishlatish imkoniyati mavjud. Funksiyani nomlashning asosiy qoidalari, o'zgaruvchini nomlashga o'xshaydi. Funksiya uchun, u o'zida saqlayotgan qiymatdan kelib chiqqan holda nom yozgan ma'qul. Misol uchun, agar funksiya ikkita raqamni qo'shish uchun ishlatilsa, siz funksiyani add yoki addNumbers deb nomlashingiz mumkin. Funksiya tanasi curly braces {} ichida yoziladi.
+
+Funktsiya parametrlari
+Funktsiyani parametrlar bilan ham e'lon qilish mumkin. Parametr - bu funktsiyani e'lon qilishda o'tkaziladigan qiymat.
+Eslatma: Funksiyani e’lon qilishda qiymat berilganda u parametr deyiladi. Va funksiya chaqirilganda berilgan qiymat argument deb ataladi.
+
+
+Function Return
+return statement - funksiyaga ma'lum bir qiymat qaytarish uchun xizmat qialadi, u funksiyaning tana qismida ishlatilinadi. Odatda function decloration 'da return statement yozish ixtiyoriy, agar biz return statement 'ga ega bo'lgan funksiya e'lon qilsak, bunday holatda return funksiya tugallanganligini bildiradi, undan so'ng hech qanday code ishga tushirilmaydi. Agarda funksiyaga hech qanday qiymat qaytarilmasa, unda funksiya undefined qiymatini qaytaradi.
