@@ -1,0 +1,24 @@
+Function expression
+Function expression - funksiya ifoda ko'rinishida ham e'lon qilinishi mumkin, bunday holatda funksiya function kalit so'zi yordamida e'lon qilinib, ma'lum bir o'zgaruvchiga tenglab qo'yiladi.
+Function expression ham o'zida return statement 'ni qabul qilishi mumkin, ya'ni ma'lum bir qiymat qaytarishi mumkin. Agar funksiya shu ko'rinishda e'lon qilingan bo'lsa, unda uni e'lon qilinishidan avval ishlatishning imkoni yo'q.
+
+// program to find the square of a number
+// function is declared inside the variable
+let x = function (num) { return num * num }:
+console. log(x(4));
+// can be used as variable value for other variables
+let y = x(3):
+console. log(y):
+
+Ushbu misolda funksiya x o'zgaruvchisiga tenglab qo'yilganini ko'rishimiz mumkin. Hamda ushbu holatda funksiya o'zgaruvchi nomi yordamida chaqiriladi. Biz bunday funksiyalarni anonim funksiya deb ham ataymiz.
+
+JavaScript Arrow Function
+Arrow function - JavaScript 'ning ES6 versiyasida taqdim etilgan funksiyalardan biridir. Bu oddiy funksiyalarga nisbatan funksiyalarni yanada tez yaratishga imkon beradi. Masalan,
+
+Arrow Function Syntax
+let myFunction = (arg1, arg2, ...argN) => {
+    statement(s)
+}
+myFunction - funksiya nomi
+arg1, arg2, ...argN - funksiya argumentlari
+statement(s) - funksiyaning tana (body) qismi
