@@ -1,0 +1,46 @@
+Array (massiv)
+Hozirgi paytgacha biz o'zgaruvchilarga faqatgina  birgina qiymat saqlab kelayotgan edik, endi esa Array 'lardan foydalangan holda bitta o'zgaruvchiga bir nechta qiymatlarni saqlashimiz mumkin va xatto ularning ma'lumot turlari ham har xil bo'lishi mumkin.
+const words = ['hello', 'world', 'welcome'];
+
+Create an Array
+Array yaratishning ikki xil usuli mavjud,
+
+Eng sodda usuli [] qavslardan foydalangan holda array yaratish
+const array1 = ["eat", "sleep"];
+
+Array yaratishning yana boshqa usuli bu, new kalit so'zidan foydalangan holda array yaratish
+const array2 = new Array("eat", "sleep");
+
+Array elementlarini ularning index 'laridan foydalangan holda olish mumkin. Array index 'lari doimo 0 dan boshlanadi
+
+Array 'ga element qo'shish
+Array 'ga element qo'shishning ikki xil usuli mavjud, push() va unshift(). push() metodi array oxiriga element qo'shadi.
+unshift() metodi array boshiga element qo'shadi.
+
+Array elementlarini o'zgartirish
+Biz array 'larga, ularning index 'laridan foydalangan holda yangi element qo'shishimiz yoki arrayda mavjud elementlarni o'zgartirishimiz mumkin.
+Aytaylik, massiv ikkita elementga ega. Agar biz 3-indeksga (ya'ni to'rtinchi element sifatida) element qo'shishga harakat qilsak, uchinchi element avto ravishda undefined bo'ladi.
+
+Massivdan element o'chirish
+Massivdan elementlarni ikki xil yo'l bilan o'chirish mumkin, bular pop() hamda shift()
+pop() massivning oxiridan elementni o'chiradi va qiymat qaytaradi.
+shift() metodi massivning boshidan element o'chiradi va qiymat qaytaradi
+
+Array length
+Massiv uzunligini aniqlash uchun length kalit so'zidan foydalaniladi
+
+slice() - massivning ko'rsatilgan qismini tanlab, yangi massiv qaytaradi
+splice() - massivdagi mavjud elementlarni olib tashlaydi yoki almashtiradi
+
+Ichma-ich ochilgan massivlarga misol:
+const data = [[1, 2, 3], [1, 3, 4], [4, 5, 6]];
+
+Ichma-ich ochilgan massivlardan element olish:
+let x = [
+['Jack', 24],
+['Sara', 23],
+['Peter', 24]
+];
+console.log(x[0]); // ["Jack", 24]
+console.log(x[0][0]); // Jack
+console.log(x[2][1]); // 24

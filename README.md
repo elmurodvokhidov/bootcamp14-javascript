@@ -1,0 +1,2 @@
+# To'qqizinchi dars
+## Array
