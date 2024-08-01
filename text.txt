@@ -1,0 +1,13 @@
+Array methods
+Array methods - array metodlari bizga massivlar bilan ishlashni onsonlashtiradi. Javascript dasturlash tilida quyidagi array metodlari mavjud:
+concat() - Ikka va undan ortiq massivlarni birlashtiradi
+join() - bir nechta satrlarni birlashtiradi
+indexOf() - massivdan element qidiradi va uning joylashgan o'rnini qaytaradi
+includes() - massivda ko'rsatilgan element mavjudligini tekshiradi
+find() - funksiyadagi shartni qanoatlantirgan birinchi elementni qaytaradi
+findIndex() - 'find' kabi ishlaydi, faqat bu elementning index'ni qaytaradi
+forEach() - massivning har bir elementi uchun berilgan amalni qo'llaydi
+filter() - funksiya qaytaradigan qiymatiga qarab yangi massiv hosil qiladi
+map() - funksiya qaytaradigan qiymatlar asosida yangi massiv hosil qiladi
+reverse() - massivni teskari tartiblaydi, birinchi element oxirgi bo'lib qoladi
+sort() - massivni alfavit va o'sish tartibi bo'yicha tartiblaydi
