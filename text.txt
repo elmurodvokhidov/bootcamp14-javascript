@@ -1,0 +1,93 @@
+Javascript Objects
+Javascript Objects - bir nechta ma'lumotlar to'plamini saqlashga imkon beruvchi ma'lumot turi. Obyektlar figurali qavslar {} yordamida e'lon qilinadi. U o'z ichiga property qabul qiladi (ya'ni key va value)
+
+Obyektni e'lon qilish sintaksisi:
+const object_name = {
+   key1: value1,
+   key2: value2
+}
+object_name - obyekt nomi
+key1/key2 - obyektning key'lar yoziladi
+value1/value2 - obyektning key saqlayotgan qiymati
+
+Object property 'laridan qiymat olish
+Obyekt xossasidan qiymat olish uchun uning key 'laridan foydalaniladi. Qiymat olishning ikki xil usuli mavjud, oddiy nuqta yordamida:
+
+objectName.key
+
+To'rtburchak qavslardan foydalangan holda:
+
+objectName["propertyName"]
+
+Javascript Nested Objects
+Obyekt ichiga yana bir obyekt yozish imkoniyati mavjud va bunday obyektlarga nested objects deyiladi (ya'ni ichma-ich ochilgan obyektlar). Quyidagi misolda student obyektining marks nomli key ham obyekt ekanligini ko'rishimiz mumkin.
+const student = {
+    name: "John",
+    age: 20,
+    marks: {
+        science: 70,
+        math: 75
+    }
+}
+// accessing property of student object
+console.log(student.marks); // {science: 70, math: 75}
+// accessing property of marks object
+console. log(student.marks.science); // 70
+
+Object methods
+Agar obyekt o'z ichida funksiya saqlasa, ular obyekt metodlari deb nomlanadi. Quyidagi misolda funksiya greet key uchun qiymat sifatida ishlatilinadi, aynan shuning uchun ham obyekt ichidagi funksiyani chaqirish uchun person.greet o'rniga person.greet() dan foydalanishimiz kerak
+const person = {
+name: 'Sam'
+age: 30,
+// using function as a value
+greet: function() { console. log('hello') }
+
+}
+person. greet()); // hello
+
+this keyword
+Method ichida object'ning xususiyatlarini ishlatish uchun this kalit so'zidan foydalaniladi. Ushbu misolda person obyekti mavjud va uning xususiyatlari (name va age), metodi esa greet, va bu yerda obyekt xususiyatlariga kirish uchun this kalit so'zi ishlatilinadi
+const person = {
+    name: "John",
+    age: 30,
+
+    // accessing name property by using this.name
+    greet: functioin() {console.log("The name is" + " " + this.name)}
+}
+person.greet();
+
+Object.keys()
+Ushbu funksiya, berilgan object'ning kalitlar ro'yxatini qaytaradi
+let Student = {
+    name: "Lisa",
+    age: 24,
+    marks: 78.9,
+}
+// get all keys of Student
+let std1 = Object.keys(Student);
+console. log(std1);
+// Output: [ 'name', 'age', 'marks' ]
+
+Object.values()
+Ushbu funksiya, berilgan object'ning qiymatlar ro'yxatini qaytaradi
+array-like object having integers as key
+const obj = { 65: "A", 66: "B", 67: "C" };
+
+//print the enumerable values of obj
+console.log(Object.values(obj));
+
+// Output: [ "A", "B", "C" ]
+
+For In Loop
+JavaScriptda for in tsikli ob'ektning xususiyatlari bo'ylab aylanadi:
+for (key in object) {
+  // code block to be executed
+}
+
+For Of Loop
+JavaScriptda for of tsikli takrorlanadigan ob'ektning qiymatlari orqali aylanadi.
+
+Bu sizga massivlar, satrlar, xaritalar, tugunlar roʻyxati va boshqalar kabi takrorlanadigan maʼlumotlar tuzilmalari ustidan aylanish imkonini beradi:
+for (variable of iterable) {
+  // code block to be executed
+}
