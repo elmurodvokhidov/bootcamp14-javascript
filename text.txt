@@ -1,0 +1,27 @@
+JavaScriptda har qanday qiymat biror bir turga oid. Masalan son yoki obyekt. Ular sodda va murakkab, JavaScript tili bilan aytganda "primitive" va "non-primitive" tuslariga bo'linadi.
+
+Primitive - o'zida sodda qiymatni saqlaydigan o'zgaruvchilarga aytiladi. Masalan son, matn va hokazo.
+
+Non-primitive (Reference) - o'zida murakkab ko'rinishdagi ma'lumotlar, masalan funksiyalar, arraylar va boshqalarni saqlaydigan o'zgaruvchilarga aytiladi.
+
+Biz biror o'zgaruvchiga xohlagan turdagi ma'lumot turini berishimiz mumkin. Masalan, biror qiymatga son berib, unga yangi ma'lumot turi, masalan matn (keyinchalik - string) qiymatini berishimiz mumkin. Chunki, JavaScript "dynamically-typed language" ya'ni dinamik tarzda yoziladigan til sirasiga kiradi.
+
+JavaScriptda 7ta primitive va 1ta non-primitive ma'lumot tuslari bor:
+1.string
+2.number
+3.bigint
+4.boolean
+5.undefined
+6.symbol
+7.null
+
+1.object
+
+Factory function
+JavaScript-da Factory funksiyasi ob'ektni qaytaruvchi funktsiyadir. Bu ko'proq boshqariladigan va moslashtirilgan tarzda ob'ektlarni yaratish va qaytarish usuli. Factory funktsiyalari o'ziga xos xususiyatlar va xatti-harakatlarga ega bo'lgan ob'ektlarni yaratishga imkon beruvchi dizayn naqshining shaklidir.
+
+
+Constructor function
+Ba'zan bir xil turdagi ko'plab ob'ektlarni yaratishga to'g'ri keladi.
+Ob'ekt turini yaratish uchun biz ob'ekt Constructor funksiyasidan foydalanamiz.
+Constructor funksiyalarini bosh harf (PascalCase) bilan nomlash yaxshi amaliyot hisoblanadi.
