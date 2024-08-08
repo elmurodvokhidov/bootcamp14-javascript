@@ -1,0 +1,24 @@
+Javascript DOM
+DOM - kengaytmasi Document Object Model, dasturlash interfeysi bo'lib, u yordamida hujjatda element yaratish, o'zgartirish hamda o'chirish imkoniyati mavjud, undan tashqari elementlarga hodisalar ham qo'shish mumkin
+
+Documentdan element tanlab olish
+getElementById() - elementni ID orqali tanlab olish
+getElementsByName() - elementni nomi (name) orqali tanlab olish
+getElemenstByClassName() - elementni class orqali tanlab olish
+getElementsByTagName() - elementni tag nomi orqali tanlab olish
+querySelector() - elementlarni CSS selektori yordamida tanlab olish
+querySelectorAll() - CSS selektoridagi barcha elementlarni qaytaradi
+
+Elementga style berish
+Javascript'da documentdan tanlab olingan elementlarga, javascript orqali style berishning ikki xil usuli mavjud, birinchisi: element.style.cssProperty, 
+ikkinchisi: element.style.cssText = `cssProperty`
+
+element - documentdan tanlab olingan element nomi
+cssProperty - CSS xususiyati (masalan: display yoki width)
+style bilan cssText - maxsus kalit so'zlar
+
+Element matnini o'zgartirish
+DOM api dan tanlab olingan elementlarning matnini o'zgartirish uchun elementning textContent nomli maxsus attributi mavjud. Undan foydalangan holda biz har qanday elementning matnini o'zgartira olamiz
+
+Element tanasini o'zgartirish
+Tanlab olingan elementlarni tana qismini boshqa HTML elementiga o'zgartirish uchun elementning innerHTML attributi ishlatilinadi

@@ -1,0 +1,2 @@
+# O'n uchinchi dars
+## DOM, document object, getElementById(), getElementsByTagName(), getElementsByClassName(), HTMLCollection, NodeList, style, querySelector(), querySelectorAll(), textContent, innerHTML
