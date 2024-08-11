@@ -1,0 +1,25 @@
+Elementga style berish
+Javascript'da documentdan tanlab olingan elementlarga, javascript orqali style berishning ikki xil usuli mavjud, birinchisi: element.style.cssProperty, 
+ikkinchisi: element.style.cssText = `cssProperty`
+
+element - documentdan tanlab olingan element nomi
+cssProperty - CSS xususiyati (masalan: display yoki width)
+style bilan cssText - maxsus kalit so'zlar
+
+Yangi element yaratish
+DOM api 'ning createElement() nomli maxsus metodidan foydalangan holda documentda yangi element yaratish imkoniyati mavjud
+
+Element qo'shish
+DOM api 'ning appendChild() nomli maxsus metodidan foydalangan holda elementlarni o'zaro qo'shish imkoniyati mavjud.
+
+Element o'chirish
+DOM api 'ning removeChild() nomli maxsus metodidan foydalangan holda elementlarni o'chirish imkoniyati mavjud.
+
+getAttribute() - metodi element attributini qaytaradi.
+setAttribute() - metodi elementga yangi attribut ta'yinlaydi.
+
+
+classList - xossasi elementlarning class'lar ro'yhatini qaytaradi, uning quyidagi 3ta metodi mavjud:
+add() - elementga yangi class qo'shadi.
+remove() - elementdagi mavjud class'ni o'chiradi.
+toggle() - elementda ko'rsatilgan class mavjud bo'lsa uni o'chiradi, aks holda qo'shadi.
