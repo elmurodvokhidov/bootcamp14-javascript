@@ -1,0 +1,38 @@
+Javascript Events
+Events - foydalanuvchi tomonidan yoki brauzer tomonidan amalga oshirilishi mumkin bo'lgan hodisalar. Biz ma'lum bir HTML, brauzer yoki user (foydalanuvchi) tomonidan amalga oshirilgan hodisalarni Javascript orqali funksiyalarga ulashimiz mumkin va bu bilan biz veb sahifamizni interaktiv qilamiz
+
+biron-bir button'ning bosilishi
+sahifaning yuklanishi
+online/offline holatlar
+
+Elementlarga hodisalarni ulash (bog'lash) ning uchta usuli mavjud
+
+Inline event handlers
+Inline event properties
+Event listener
+
+
+Inline event handler
+Event  nomi hamda  funksiya nomi HTML tag'lariga attribut sifatida yoziladi, funksiya qismi esa script faylida yoziladi. Odatda bunday usulda event yozish faqat o'rganish maqsadida ishlatilinadi, real loyihalarda esa bunday usuldan foydalanish tafsiya etilmaydi!
+
+
+Inline event properties
+Inline event handlers usuli bilan  deyarli bir xil, ularning yagona farqi shundaki, Inline event properties usulida funksiya nomi HTML elementiga inline attribut sifatida emas, balki tanlab olingan holatda beriladi, ya'ni bu safar barcha ish script faylimizda amalga oshiriladi.
+
+
+Event listener
+Ushbu usul barcha loyihalarda keng qo'llaniladigan event usuli hisoblanib, bunda elementdan keladigan hodisani tinglab turadi va shu hodisa bajarilganda ko'rsatilgan funksiyani ishga tushirib yuboradi
+
+
+Ko'p ishlatiladigan event'lar
+click - user biron elementga bosgandagi event (hodisa/holat)
+dblclick - user biron elementga ikki marta bosgandagi hodisa
+mouseenter - mouse (sichqoncha) elementga kirgandagi hodisa
+mouseleave - mouse elementni tark etgandagi hodisa
+mousemove - mouse element ichida xarakatlangandagi hodisa
+keydown - istalgan bir klaviatura tugmasi bosilgandagi hodisa
+keyup - istalgan bir klaviatura tugmasi bosib qo'yib yuborgandagi hodisa
+keypress - istalgan bit klaviatura tugmasi bosib turilgandagi hodisa
+submit - form oyna submit bo'lganda ishga tushadigan hodisa
+focus - elementning focus bo'lgandagi hodisa
+blur - element o'zidan focus 'ni yo'qotgandagi hodisa
