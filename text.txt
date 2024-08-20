@@ -1,0 +1,30 @@
+setInterval()
+setInterval() - ko'rsatilgan funksiyani, belgilangan oraliqlarda chaqiradi. (o'lchov birligi: millisekund). setInterval() metodi funksiyani, clearInterval() chaqirilguncha yoki sahifa yopilmaguncha chaqiradi.
+
+setTimeout() - usuli bir necha millisekunddan keyin funksiyani chaqiradi.
+setTimeout() faqat bir marta bajariladi.
+Funktsiyani ishga tushirishni oldini olish uchun clearTimeout() usulidan foydalaning.
+Vaqt tugashini o'chirish uchun setTimeout() dan qaytarilgan identifikatordan foydalaning:
+
+myTimeout = setTimeout (funktsiya, millisekundlar);
+
+Keyin clearTimeout() ga qo'ng'iroq qilib, ijroni to'xtatishingiz mumkin:
+
+clearTimeout (myTimeout);
+
+Javascript Date Formats
+Javascript orqali hozirgi aniq vaqtni olish uchun new Date() maxsus metodidan foydalanamiz, u hozirgi to'lliq vaqtni matn sifatida qaytaradi.
+
+Javascript Date Get Methods
+Javascript get metodi orqali, biz Date obyektidan qaytadigan to'lliq sana ichidan o'zimizga kerakli bo'lgan qiymatlarni olishimiz mumkin.
+
+Date Get Methods
+getFullYear() - yilni to'rt xonali raqam sifatida qaytaradi (yyyy)
+getMonth() - oyni raqam sifatida qaytaradi (0-11)
+getDate() - kunni raqam sifatida qaytaradi (1-31)
+getHours() - soatni qaytaradi (0-23)
+getMinutes() - minut qaytaradi (0-59)
+getSeconds() - sekund qaytaradi (0-59)
+getMilliseconds() - millisekund qaytaradi (0-999)
+getTime() - 1970-yil 1-yanvardan boshlab, hozirgi vaqtgacha bo'lgan millisekundlarni qaytaradi
+getDay() - hafta kunlarini raqam sifatida qaytaradi (0-6)
