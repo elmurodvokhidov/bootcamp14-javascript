@@ -4,32 +4,37 @@ const database = [
         image: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
         title: "Basic Tee",
         color: "Black",
-        price: 35
+        price: 35,
+        description: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available.",
     },
     {
         id: 2,
         image: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg",
         title: "Basic Tee",
         color: "Aspen White",
-        price: 35
+        price: 35,
+        description: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available.",
     },
     {
         id: 3,
         image: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg",
         title: "Basic Tee",
         color: "Charcoal",
-        price: 35
+        price: 35,
+        description: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available.",
     },
     {
         id: 4,
         image: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg",
         title: "Artwork Tee",
         color: "Iso Dots",
-        price: 35
+        price: 35,
+        description: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available.",
     }
 ];
 
 const parent = document.getElementById("parent");
+const container = document.getElementById("container");
 
 database.forEach((value, index) => {
     parent.innerHTML += `
@@ -53,5 +58,41 @@ database.forEach((value, index) => {
 });
 
 function clickMe(index) {
-    console.log(database[index].color);
+    const targetElement = database[index];
+    container.innerHTML += `
+        <div id="modal"
+             class="overflow-y-auto flex h-screen overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full backdrop-blur-sm">
+            <div class="relative p-4 w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow-xl">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                        <h3 class="text-xl font-semibold text-gray-900">
+                            ${targetElement.title}
+                        </h3>
+                        <button onclick="closeModal()" type="button"
+                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-4 md:p-5">
+                        <p class="text-base leading-relaxed text-gray-500">
+                            ${targetElement.description}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `
+}
+
+function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.remove();
 }
