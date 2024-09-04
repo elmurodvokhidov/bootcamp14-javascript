@@ -42,7 +42,8 @@ const parent = document.getElementById("parent"),
     formElements = document.querySelectorAll(".formElement"),
     modalContent = document.querySelector("#modalContent"),
     imgInput = document.getElementById("file-upload"),
-    reviewImg = document.getElementById("reviewImg");
+    reviewImg = document.getElementById("reviewImg"),
+    form = document.getElementById("form");
 
 // Database arrayidagi har bir ma'lumotga asoslanib, ularni (ma'lumotlarini) documentga yozish
 function renderFunction() {
@@ -52,13 +53,13 @@ function renderFunction() {
     database.forEach((value, index) => {
         parent.innerHTML += `
             <div class="w-[320px] group relative">
-                <div class="w-full h-80 overflow-hidden rounded-md bg-gray-200 hover:opacity-75">
+                <div onclick="clickMe(${index})" class="w-full h-80 overflow-hidden rounded-md bg-gray-200 hover:opacity-75 hover:cursor-pointer">
                     <img src=${value.image}
                         alt=${value.title}
                         class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                 </div>
                 <div class="mt-4 flex justify-between">
-                    <div onclick="clickMe(${index})" class="cursor-pointer">
+                    <div>
                         <h3 class="text-sm text-gray-700">
                             ${value.title}
                         </h3>
@@ -80,6 +81,7 @@ renderFunction();
 
 // Har bir element (mahsulot) ustiga bosilganida ko'rsatiladigan modal oyna
 function clickMe(index) {
+    console.log("clicked");
     const targetElement = database[index];
     container.innerHTML += `
         <div id="modal"
@@ -182,10 +184,11 @@ function openFormForUpdate(index) {
 }
 
 // Yangi ma'lumotlarni mavjud arrayga qo'shish va yangilash
-addButton.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
     // Yangilanishlarni oldini oladi
     e.preventDefault();
     // Avval input bo'sh emasligi tekshiriladi so'ng yangi ma'lumot arrayga qo'shiladi
+    // Bu yerda ixtiyoriy regular expression amallari ham bajarilishi mumkin...
     if (formElements[0].value !== "" && formElements[1].value !== "" && formElements[2].value !== "" && formElements[3].value !== "") {
         if (newProductValue.id === "") {
             // Yangi mahsulot qo'shish

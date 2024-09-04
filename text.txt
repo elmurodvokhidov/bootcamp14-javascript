@@ -1,0 +1,74 @@
+Regular Expression (RegEx) bu matnni izlash, topish, almashtirish va tekshirish uchun ishlatiladigan kuchli vositadir. Ular matn naqshlarini aniqlash uchun maxsus belgi va qoidalar to'plamidan foydalanadi. RegEx ko'pincha string manipulyatsiyasi va validatsiyasi uchun dasturlash tillarida qo'llaniladi.
+
+RegExning Asosiy Elementlari
+
+1. Literallar:
+   - RegExda odatiy harflar yoki raqamlar literallar deb ataladi. Ular o'zlarini ifodalaydi.
+   - Masalan: `abc` naqshi `abc` ketma-ketligini qidiradi.
+
+2. Maxsus Belgilar:
+   - `.`: Har qanday bitta belgini bildiradi, yangi satrdan tashqari.
+     - Masalan: `a.c` `abc`, `a1c`, `a-c` kabilarga mos keladi.
+   - `^`: Satrdan boshlanishini bildiradi.
+     - Masalan: `^abc` satr `abc` bilan boshlanishini tekshiradi.
+   - `$`: Satrdan tugashini bildiradi.
+     - Masalan: `abc$` satr `abc` bilan tugashini tekshiradi.
+   - `*`: Oldingi belgi yoki naqshning nol yoki ko'p martada takrorlanishini bildiradi.
+     - Masalan: `a*` `a`, `aa`, `aaa`, yoki `b` bilan mos keladi.
+   - `+`: Oldingi belgi yoki naqshning kamida bitta yoki ko'p martada takrorlanishini bildiradi.
+     - Masalan: `a+` `a`, `aa`, `aaa` bilan mos keladi.
+   - `?`: Oldingi belgi yoki naqshning nol yoki bitta martada takrorlanishini bildiradi.
+     - Masalan: `a?` `a` yoki hech narsa (bo'sh string) bilan mos keladi.
+   - `|`: Yoki operatori. Ikki yoki undan ortiq naqshlardan biriga mos keladi.
+     - Masalan: `abc|xyz` `abc` yoki `xyz` bilan mos keladi.
+   - `\`: Maxsus belgilarga literal ma'nosini berish uchun ishlatiladi.
+     - Masalan: `\.` haqiqiy nuqta belgisi bilan mos keladi.
+
+3. Kvadrat Qavslar `[ ]`:
+   - Kvadrat qavs ichida berilgan belgilar to'plamidan bittasini qidiradi.
+   - Masalan: `[abc]` `a`, `b`, yoki `c` bilan mos keladi.
+   - `[^]`: Bu belgilar to'plamidan boshqa belgilarni bildiradi.
+     - Masalan: `[^abc]` `a`, `b`, yoki `c` dan boshqa har qanday belgi bilan mos keladi.
+
+4. Qo'sh Qavslar `( )`:
+   - Naqsh guruhlash uchun ishlatiladi.
+   - Masalan: `(abc)+` bu naqsh `abc`, `abcabc`, va hokazolar bilan mos keladi.
+
+5. O'zgaruvchilar `{}`:
+   - Belgining takrorlanish sonini bildiradi.
+   - Masalan: `a{2,4}` bu naqsh `aa`, `aaa`, yoki `aaaa` bilan mos keladi.
+   - `{n}`: Aniq n martaligi.
+     - Masalan: `a{3}` `aaa` bilan mos keladi.
+   - `{n,}`: Kamida n martaligi.
+     - Masalan: `a{2,}` `aa`, `aaa`, va hokazolar bilan mos keladi.
+
+Misollar
+
+1. Emailni tekshirish:
+   ```regex
+   ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+   ```
+   - Bu RegEx email manzillarini tekshirish uchun ishlatiladi. 
+
+2. Telefon raqamini tekshirish:
+   ```regex
+   ^\+998\-\d{2}\-\d{3}\-\d{2}\-\d{2}$
+   ```
+   - Bu RegEx O'zbekiston telefon raqamini `+998-XX-XXX-XX-XX` formatida tekshirish uchun.
+
+3. Foydalanuvchi ismini tekshirish:
+   ```regex
+   ^[a-zA-Z0-9_-]{3,16}$
+   ```
+   - Bu RegEx 3 dan 16 gacha uzunlikdagi foydalanuvchi ismlarini tekshirish uchun ishlatiladi.
+
+Foydali Qo'llanishlar
+
+- Matn ichidagi ma'lumotlarni qidirish va chiqarib olish: Masalan, URLlar yoki email manzillarni matn ichidan chiqarib olish.
+- Matnni almashtirish: Muayyan naqshga mos keladigan qismlarni almashtirish yoki o'chirish.
+- Validatsiya: Formalarda kiritilgan ma'lumotlarni, masalan, telefon raqamlari, email manzillarini tekshirish.
+
+RegEx juda qudratli va turli xil vazifalarda foydalanilishi mumkin. Dasturlash tiliga qarab RegEx qo'llanilishi biroz farq qilishi mumkin, shuning uchun tanlagan tilingizning hujjatlariga qarab RegEx ni qanday ishlatishni o'rganish muhim.
+
+Amaliy bilimga ega bo'lish uchun ushbu playlistdagi video darsliklarni ko'rib chiqing!
+https://youtube.com/playlist?list=PL4cUxeGkcC9g6m_6Sld9Q4jzqdqHd2HiD&feature=shared
