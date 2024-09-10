@@ -1,0 +1,83 @@
+JSON
+JSON - (JavaScript Object Notation) bu ma'lumotlarni saqlovchi va tashuvchi format hisoblanadi, uning yordamida biz server bilan ma'lumot almashamiz. JSON sintaksisi Javascript Obyektidan olingan, JSON 'da ma'lumotlar matn ko'rinishida saqlanadi
+
+JSON.parse() & JSON.stringify()
+JSON.parse() - ma'lumotlarni JSON 'dan chiqarish uchun ishlatilinadi
+JSON.stringify() - ma'lumotlarni JSON formatiga o'tkazish uchun ishlatilinadi
+
+Callback funksiyasi — bu boshqa funksiyaga argument sifatida uzatiladigan va keyinchalik chaqiriladigan funksiyadir. JavaScriptda asinxron operatsiyalarni boshqarish uchun callback funksiyalari keng qo'llaniladi. Masalan, ma'lum bir operatsiya tugagach, callback funksiya chaqirilib, natijani qayta ishlaydi.
+
+Callback Funksiyasi uchun Qoida:
+1. Boshqa Funksiyaga Argument Sifatida Uzatiladi: Callback funksiya odatda birinchi funksiyaga argument sifatida beriladi va keyinchalik chaqiriladi.
+2. Ixtiyoriy Chaqiriladi: Callback funksiyalar aniq vaqtda emas, balki operatsiya tugagandan so'ng chaqiriladi.
+3. Sinxron yoki Asinxron Bo'lishi Mumkin: Callback funksiyalar sinxron (ya'ni, darhol chaqiriladi) yoki asinxron (kechiktirilgan vaqtda yoki hodisa sodir bo'lganda) bo'lishi mumkin.
+4. Funksional Kodni Bo'linish: Callback funksiyalar kodni modular va qayta ishlatiladigan qilish uchun yordam beradi, ayniqsa bir nechta operatsiyalarni ketma-ket yoki bir vaqtda boshqarishda.
+
+Callback Funksiyasining JavaScriptda Foydalanilishi:
+function doSomething(callback) {
+  console.log("Nimadir bajarildi");
+  callback(); // callback funksiyasi shu yerda chaqiriladi
+}
+
+function afterCompletion() {
+  console.log("Callback funksiyasi ishladi");
+}
+
+doSomething(afterCompletion);
+
+Qoida:
+1. Callback funksiyalar boshqa funksiyaga argument sifatida beriladi.
+2. Callback funksiyalar boshqa kodning bajarilishi tugagach chaqiriladi.
+3. Asinxron jarayonlar bilan ishlaganda (masalan, vaqt o‘tkazgichlar, so'rovlar) callback funksiya natijani boshqarish uchun ishlatiladi.
+
+Sync (Sinxron) va Async (Asinxron) dasturlash JavaScript'da kodning qanday bajarilishini anglatadi. Ularning farqi kodning ketma-ket bajarilishi yoki bir vaqtning o'zida bir nechta operatsiyalarning bajarilishi bilan bog'liq.
+
+Sinxron (Sync) Dasturlash Nima?
+Sinxron dasturlash shuni anglatadiki, kod qatorma-qator bajariladi va har bir vazifa tugagandan keyingina keyingi vazifa bajariladi. Har bir operatsiya navbatda turib, oldingi operatsiya tugaguncha kutadi.
+
+Misol:
+console.log('1-vazifa');
+console.log('2-vazifa');
+console.log('3-vazifa');
+
+
+Natija:  
+
+1-vazifa  
+2-vazifa  
+3-vazifa
+
+
+Bu yerda kod ketma-ket, birin-ketin bajariladi, ya'ni `1-vazifa` konsolga chiqariladi, keyin `2-vazifa`, so'ngra `3-vazifa`.
+
+Asinxron (Async) Dasturlash Nima?
+Asinxron dasturlash shuni anglatadiki, kodning ba'zi qismlari bajarilishi davomida boshqa qismlar kutmasdan ishga tushadi. Bu degani, kodning bir qismi bajarilayotganda boshqa qismlar ham o‘z ishini bajarishi mumkin.
+
+Misol:
+console.log('1-vazifa');
+
+setTimeout(() => {
+  console.log('2-vazifa (asinxron)');
+}, 2000);
+
+console.log('3-vazifa');
+
+
+Natija:
+
+1-vazifa  
+3-vazifa  
+2-vazifa (asinxron)
+
+
+Bu yerda `setTimeout` asinxron funktsiya bo'lib, u 2 soniya kutgandan keyin bajariladi. Shu sababli, `1-vazifa` va `3-vazifa` darhol bajariladi, keyin esa 2 soniyadan keyin `2-vazifa` konsolga chiqariladi.
+
+Farq
+- Sinxron (Sync): Har bir vazifa ketma-ket bajariladi, va kod ketma-ket tartibda ishlaydi. Har bir vazifa oldingi vazifa tugagandan so'ng bajariladi.
+- Asinxron (Async): Bir vaqtning o'zida bir nechta vazifa bajarilishi mumkin. Ba'zi kodlar bajarilish vaqtida boshqa kodlar ham ishlashda davom etadi.
+
+Xulosa
+- Sync: Kod tartib bilan bajariladi, har bir operatsiya boshqa operatsiyalardan keyin ishga tushadi.
+- Async: Operatsiyalar bir vaqtning o'zida yoki oraliq kutish bilan bajarilishi mumkin bo'lgan kodlar.
+
+Asinxron dasturlash real hayotda foydalidir, chunki u katta hajmdagi operatsiyalarni (masalan, tarmoqli so'rovlar yoki fayllarni yuklash) kodni to'xtatmasdan bajarishga imkon beradi.
